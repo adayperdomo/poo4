@@ -1,17 +1,14 @@
 class EjemploExcepciones:
     # ZeroDivisionError
 
-    def intDiv(a: int, b: int) -> int:
-        try:
-            a = 10
-            b = 0
-            print(a/b)
-        except ZeroDivisionError:
-            return("Error: Cannot divide by zero")
+    def zeroDivisionError(self, *, num: int, den: int):
+        if (den == 0):
+            raise ZeroDivisionError
+        return num // den
     
     # ValueError
 
-    
+
 
     # FileNotFoundError
 
