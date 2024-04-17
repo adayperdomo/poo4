@@ -15,7 +15,11 @@ class EjemploExcepciones:
 
     # FileNotFoundError
 
-    
+    def fileNotFoundError(file):
+        abrir = open(file)
+        if abrir != open():
+            raise FileNotFoundError
+        return "El archivo no se abre"
 
     # Type
     
