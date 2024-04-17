@@ -8,9 +8,14 @@ class EjemploExcepciones:
     
     # ValueError
 
-
+    def valueError(self, num: int):
+        if num < 0:
+            raise ValueError
+        return num ** 0.5
 
     # FileNotFoundError
+
+    
 
     # Type
     
