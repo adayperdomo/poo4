@@ -1,0 +1,6 @@
+# Created by pytest automatically.
+__pycache__/*
+.pytest_cache
+.vscode
+tests/__pycache__/*
+reg/__pycache__/*
