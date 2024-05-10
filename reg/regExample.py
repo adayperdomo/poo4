@@ -1,6 +1,6 @@
 import re
 
-class RexExample:
+class RegExample:
     def __init__(self) -> None:
         pass
 
@@ -13,7 +13,12 @@ class RexExample:
     
     @staticmethod
     def validURL(url:str) -> bool:
-        pass
+        patron = "^(?:(http))"
+        result = re.findall(patron, url)
+        if result == ["http"]:
+            return True
+        else:
+            return False
     
 if __name__=="__main__":
     text = """
@@ -27,4 +32,4 @@ Curabitur at finibus augue. In euismod vel sapien et faucibus. Praesent mollis, 
 
 Phasellus malesuada in metus nec tristique. Praesent eget mauris nibh. Phasellus fermentum, erat sit amet fringilla vehicula, mauris dolor venenatis erat, euismod tempor diam ante eu dui. Quisque ultricies blandit turpis, at placerat ante suscipit ac. Phasellus nisl mi, viverra sed convallis ac, pharetra et dolor. Proin condimentum nec tortor quis lacinia. Ut et aliquet ligula, a porta metus. Curabitur sed mi et ligula posuere gravida. Maecenas congue fermentum viverra.
 """
-    print(RexExample.buscar(text))
+    print(RegExample.buscar(text))
